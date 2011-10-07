@@ -1,4 +1,4 @@
-package org.ambientdynamix.contextplugins.airpolutantsplugin;
+package org.ambientdynamix.contextplugins.withingsplugin;
 
 import java.util.Date;
 
@@ -10,7 +10,6 @@ public class Measurement implements Parcelable
 	String name="";
 	double value=-999.9;
 	String unit="";
-	Station station= new Station("FakeStation");
 	long date = 0;
 	double distance=0.0;
 	
@@ -30,12 +29,11 @@ public class Measurement implements Parcelable
 		}
     };
 
-    public Measurement(String n, double v, String u, Station s, Date d, double di)
+    public Measurement(String n, double v, String u, Date d, double di)
     {
     	name=n;
     	value=v;
     	unit=u;
-    	station=s;
     	date=d.getTime();
     	distance=di;
     }
@@ -55,11 +53,6 @@ public class Measurement implements Parcelable
     	return unit;
     }
     
-    public Station getStation()
-    {
-    	return station;
-    }
-    
     public double getValue()
     {
     	return value;
@@ -76,12 +69,11 @@ public class Measurement implements Parcelable
     	return distance;
     }
     
-    public void update(String n, double v, String u, Station s, Date d, double di)
+    public void update(String n, double v, String u, Date d, double di)
     {
     	name=n;
     	value=v;
     	unit=u;
-    	station=s;
     	date =d.getTime();
     	distance =di;
     }
@@ -91,7 +83,6 @@ public class Measurement implements Parcelable
 		name = in.readString();
 		value= in.readDouble();
 		unit=in.readString();
-		station=in.readParcelable(getClass().getClassLoader());
 		date=in.readLong();
 		distance=in.readDouble();
 	}
@@ -108,7 +99,6 @@ public class Measurement implements Parcelable
 		parcel.writeString(name);
 		parcel.writeDouble(value);
 		parcel.writeString(unit);
-		parcel.writeParcelable(station, flags);
 		parcel.writeLong(date);
 		parcel.writeDouble(distance);
 	}

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.ambientdynamix.contextplugins.airpolutantsplugin;
+package org.ambientdynamix.contextplugins.withingsplugin;
 
 import org.ambientdynamix.contextplugin.api.*;
 
@@ -21,6 +21,6 @@ public class PluginFactory extends ContextPluginRuntimeFactory
 {
     public PluginFactory() 
     {
-    	super(AirPolutantsPluginRuntime.class, null, null);
+    	super(WithingsPluginRuntime.class, null, null);
     }
 }

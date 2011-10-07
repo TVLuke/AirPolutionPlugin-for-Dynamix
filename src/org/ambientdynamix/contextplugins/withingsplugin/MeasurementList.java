@@ -1,4 +1,4 @@
-package org.ambientdynamix.contextplugins.airpolutantsplugin;
+package org.ambientdynamix.contextplugins.withingsplugin;
 
 import java.util.ArrayList;
 import java.util.List;

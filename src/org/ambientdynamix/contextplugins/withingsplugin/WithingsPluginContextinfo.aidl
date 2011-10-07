@@ -13,6 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.ambientdynamix.contextplugins.airpolutantsplugin;
+package org.ambientdynamix.contextplugins.withingsplugin;
 
-parcelable AirPolutantsPluginContextinfo;
+parcelable WithingsPluginContextinfo;

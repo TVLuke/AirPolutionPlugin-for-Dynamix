@@ -7,4 +7,4 @@ Bundle-Vendor: Provider Name
 Import-Package: org.ambientdynamix.application.api,
  org.ambientdynamix.contextplugin.api,
  org.ambientdynamix.contextplugin.api.security
-Export-Package: org.ambientdynamix.contextplugins.airpolutantsplugin
+Export-Package: org.ambientdynamix.contextplugins.withingsplugin

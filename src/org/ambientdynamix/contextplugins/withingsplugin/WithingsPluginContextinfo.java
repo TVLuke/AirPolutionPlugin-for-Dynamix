@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.ambientdynamix.contextplugins.airpolutantsplugin;
+package org.ambientdynamix.contextplugins.withingsplugin;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -26,18 +26,18 @@ import android.os.IBinder;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class AirPolutantsPluginContextinfo implements IContextInfo 
+public class WithingsPluginContextinfo implements IContextInfo 
 {
-    public static Parcelable.Creator<AirPolutantsPluginContextinfo> CREATOR = new Parcelable.Creator<AirPolutantsPluginContextinfo>() 
+    public static Parcelable.Creator<WithingsPluginContextinfo> CREATOR = new Parcelable.Creator<WithingsPluginContextinfo>() 
     {
-    	public AirPolutantsPluginContextinfo createFromParcel(Parcel in) 
+    	public WithingsPluginContextinfo createFromParcel(Parcel in) 
     	{
-    		return new AirPolutantsPluginContextinfo(in);
+    		return new WithingsPluginContextinfo(in);
     	}
 
-    	public AirPolutantsPluginContextinfo[] newArray(int size) 
+    	public WithingsPluginContextinfo[] newArray(int size) 
     	{
-    		return new AirPolutantsPluginContextinfo[size];
+    		return new WithingsPluginContextinfo[size];
     	}
     };
     
@@ -93,12 +93,12 @@ public class AirPolutantsPluginContextinfo implements IContextInfo
     	return formats;
     };
 
-    public AirPolutantsPluginContextinfo(MeasurementList m) 
+    public WithingsPluginContextinfo(MeasurementList m) 
     {
     	this.contextData = m;
     }
 
-    private AirPolutantsPluginContextinfo(final Parcel in) 
+    private WithingsPluginContextinfo(final Parcel in) 
     {
     	this.contextData = in.readParcelable(getClass().getClassLoader());
     }
